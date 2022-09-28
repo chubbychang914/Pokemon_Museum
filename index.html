@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=DynaPuff:wght@400;500;600;700&family=Fjalla+One&family=Michroma&family=Monoton&family=Oswald:wght@400;500;600;700&family=Secular+One&family=Silkscreen&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+    <title>The Pokemon Museum</title>
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+        <div class="container-fluid">
+
+            <a href="#" class="navbar-brand">
+                <img src="data:image/png;base64,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"
+                    alt="" width="30" height="30" class="d-inline-block align-text-top">
+                POKEMON
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navLinks"
+                aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navLinks">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="https://www.google.com" class="nav-link">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.pokemon.com/us/pokedex/" class="nav-link">POKEDEX</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.google.com" class="nav-link">CARDS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid px-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div id="headinggroup" class="text-dark text-center d-none d-lg-block mt-5">
+                    <h1 class="display-2">The<span>/</span>Pokemon<span>/</span>Museum</h1>
+                    <h1 class="display-2 second">The<span>/</span>Pokemon<span>/</span>Museum</h1>
+                    <h1 class="display-2">The<span>/</span>Pokemon<span>/</span>Museum</h1>
+                    <h1 class="display-2 second">The<span>/</span>Pokemon<span>/</span>Museum</h1>
+                    <h1 class="display-2">The<span>/</span>Pokemon<span>/</span>Museum</h1>
+                    <h1 class="display-2 second">The<span>/</span>Pokemon<span>/</span>Museum</h1>
+                    <h1 class="display-2">The<span>/</span>Pokemon<span>/</span>Museum</h1>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <img class="img-fluid" src="pics/pika.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid px-0">
+        <div class="row align-items-center content">
+            <div class="col-md-6  order-2 order-md-1">
+                <img class="img-fluid" src="pics/squirt.png">
+            </div>
+            <div class="col-md-6 text-center order-1 order-md-2">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-8 blurb">
+                        <h2>The Pokemon Museum</h2>
+                        <img src="pics/pokeball icon.png" width="50" height="50" class="d-none d-lg-inline">
+                        <p class="lead">
+                            "Pokemon" is an abbreviation for Pocket Monsters, and it's managed by The
+                            Pokemon
+                            Company. In
+                            Pokemon, Pokémon Trainers catch and train Pokémon to battle other Pokémon for sport. There
+                            are
+                            currently 913 Pokémon species!!!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center content">
+            <div class="col-md-6 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-8 blurb">
+                        <h2>Introduction</h2>
+                        <img src="pics/pokeball icon.png" width="50" height="50" class="d-none d-lg-inline">
+                        <p class="lead">
+                            Pokémon is set in the fictional Pokemon universe. There are numerous regions that have
+                            appeared in the various media
+                            of the Pokémon franchise. There are 8 main series regions set in the main series games:
+                            Kanto, Johto, Hoenn,
+                            Sinnoh/Hisui, Unova, Kalos, Alola, and Galar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid" src="pics/bulba.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
