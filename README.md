@@ -1,2 +1,2 @@
 # Pokemon-Museum
- Pokemon Bootstrap Webpage
+ Bootstrap RWD Webpage
