@@ -1,8 +1,4 @@
-# Pokemon Museuem Webpage
+Created a responsive website using Bootstrap
 
-練習用 Bootstrap 製作響應式網頁
-
-使用技術：
-1. HTML
-2. CSS
-3. Bootstrap
+1. Used Bootstrap to make a responsive navbar and webpage
+2. Media Query to change font size based on different screen sizes
